@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roomix</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, serif;
+}
+
+body {
+    background: #f5f5f5;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* HEADER */
+
+.header {
+    background: white;
+    padding: 10px 0;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo h1 {
+    color: #1abc9c;
+}
+
+.menu {
+    display: flex;
+    gap: 100px;
+    list-style: none;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #1abc9c;
+}
+
+.btn {
+    background: #1abc9c;
+    color: white;
+    padding: 15px 40px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+/* HERO */
+
+.hero {
+    background: linear-gradient(135deg, #1abc9c, #48c9b0);
+    padding: 120px 0;
+    color: white;
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 56px;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.hero-btn {
+    background: #f4d03f;
+    border: none;
+    padding: 15px 60px;
+    border-radius: 20px;
+    cursor: pointer;
+    color: #1abc9c;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.hero-btn:hover {
+    transform: scale(1.05);
+}
+
+/* PRODUCTS */
+
+.services {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #1abc9c;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    padding: 40px;
+    text-align: center;
+    transition: 0.5s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.card h3 {
+    margin-top: 15px;
+    color: #333;
+}
+
+.card button {
+    margin-top: 20px;
+    background: #f4d03f;
+    border: none;
+    padding: 15px 50px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* FEATURES */
+
+.features {
+    padding: 70px 0;
+    background: white;
+}
+
+.features-grid {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.feature h3 {
+    color: #1abc9c;
+    margin-bottom: 10px;
+}
+
+/* FOOTER */
+
+.footer {
+    background: #1abc9c;
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+    .nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .menu {
+        gap: 30px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .features-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 42px;
+    }
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+    <div class="container nav">
+        <div class="logo">
+            <h1>Roomix</h1>
+        </div>
+
+        <nav>
+            <ul class="menu">
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">Товары</a></li>
+                <li><a href="#">О нас</a></li>
+            </ul>
+        </nav>
+
+        <button class="btn">Каталог</button>
+    </div>
+</header>
+
+<main>
+
+<section class="hero">
+    <div class="container">
+        <div class="hero-text">
+            <h1>Товары для дома</h1>
+            <p>Удобные и стильные решения для интерьера</p>
+            <button class="hero-btn">Смотреть</button>
+        </div>
+    </div>
+</section>
+
+<section class="services">
+    <div class="container">
+
+        <h2 class="section-title">Товары</h2>
+
+        <div class="services-grid">
+
+            <div class="card">
+                <img src="https://img.freepik.com/premium-photo/old-table-lamp-isolated-white-background-object-with-clipping-path_501761-2294.jpg" alt="Лампа">
+                <h3>Лампа</h3>
+                <button>Купить</button>
+            </div>
+
+            <div class="card">
+                <img src="https://st3.depositphotos.com/1203063/17867/i/450/depositphotos_178678642-stock-photo-blue-armchair-isolated-white-background.jpg" alt="Кресло">
+                <h3>Кресло</h3>
+                <button>Купить</button>
+            </div>
+
+            <div class="card">
+                <img src="https://nordicdesign.ru/wp-content/uploads/2020/08/sibast-N3-table-oak-white-oil.jpg" alt="Стол">
+                <h3>Стол</h3>
+                <button>Купить</button>
+            </div>
+
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQF3-UVCMugRpIFPr1-jSn0oxMDZayQmPqt9w&s" alt="Тумба">
+                <h3>Тумба</h3>
+                <button>Купить</button>
+            </div>
+
+            <div class="card">
+                <img src="https://nordicdesign.ru/wp-content/uploads/2020/09/sibast-xlibris-shelf-natural-oil-oak-2-1.jpg" alt="Полка">
+                <h3>Полка</h3>
+                <button>Купить</button>
+            </div>
+
+            <div class="card">
+                <img src="https://img.freepik.com/premium-photo/decorative-flowers-plants-interior-isolated-white-background-3d-illustration-cg-re_375001-14470.jpg" alt="Декор">
+                <h3>Декор</h3>
+                <button>Купить</button>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="features">
+    <div class="container features-grid">
+
+        <div class="feature">
+            <h3>Доставка</h3>
+            <p>Быстро привозим заказы</p>
+        </div>
+
+        <div class="feature">
+            <h3>Качество</h3>
+            <p>Проверенные товары</p>
+        </div>
+
+        <div class="feature">
+            <h3>Поддержка</h3>
+            <p>Поможем с выбором</p>
+        </div>
+
+    </div>
+</section>
+
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <p>Roomix</p>
+        <p>Товары для дома</p>
+        <p>Контакты: roomix@mail.com</p>
+    </div>
+</footer>
+
+</body>
+</html>
